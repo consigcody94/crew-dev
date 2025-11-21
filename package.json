@@ -1,0 +1,14 @@
+{
+  "name": "crew-dev",
+  "version": "1.0.0",
+  "description": "Multi-agent orchestration for software development - specialized agents work together on features end-to-end",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": { "crew-dev": "dist/cli.js" },
+  "scripts": { "build": "tsc" },
+  "keywords": ["multi-agent", "ai", "development", "orchestration", "crew"],
+  "license": "MIT",
+  "dependencies": { "chalk": "^5.3.0", "commander": "^11.1.0" },
+  "devDependencies": { "@types/node": "^20.10.5", "typescript": "^5.3.3" },
+  "engines": { "node": ">=18.0.0" }
+}
