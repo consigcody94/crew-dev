@@ -53,7 +53,7 @@ export class TesterAgent implements Agent {
 export class SecurityAgent implements Agent {
   name = 'security';
   role = 'Security Review';
-  capabilities: ['vulnerability-scanning', 'code-review', 'dependency-audit'];
+  capabilities = ['vulnerability-scanning', 'code-review', 'dependency-audit'];
 
   async execute(task: string, context?: any): Promise<AgentResult> {
     console.log(`[Security] Reviewing: ${task}`);
