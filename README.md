@@ -1,42 +1,156 @@
-# 👥 Crew Dev
+<div align="center">
 
-**Multi-Agent Orchestration for Software Development**
+<!-- Animated Header -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=8,10,12&height=200&section=header&text=👥%20CREW%20DEV&fontSize=70&fontColor=fff&animation=twinkling&fontAlignY=35&desc=Multi-Agent%20Orchestration%20for%20Software%20Development&descAlignY=55&descSize=18"/>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue)](https://www.typescriptlang.org/)
+<br/>
 
-Specialized AI agents (coder, tester, security-reviewer, doc-writer) coordinate on features end-to-end with built-in governance.
+<!-- Badges Row 1 -->
+<p>
+<a href="#"><img src="https://img.shields.io/badge/Multi--Agent-Orchestration-9b59b6?style=for-the-badge" alt="Multi-Agent"/></a>
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="License"/></a>
+<a href="#"><img src="https://img.shields.io/badge/TypeScript-5.3-3178c6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/></a>
+</p>
 
-## 🔥 The Problem
-- No multi-agent system specifically for software development workflows
-- AI agents dominating (AutoGen, CrewAI, 1.1M+ LLM SDK repos +178% YoY)
-- Need development-specific agent coordination
+<!-- Badges Row 2 -->
+<p>
+<img src="https://img.shields.io/badge/Agent-Coder-00d4aa?style=flat-square" alt="Coder"/>
+<img src="https://img.shields.io/badge/Agent-Tester-ff6b6b?style=flat-square" alt="Tester"/>
+<img src="https://img.shields.io/badge/Agent-Security-F7931E?style=flat-square" alt="Security"/>
+<img src="https://img.shields.io/badge/Agent-Docs-3178c6?style=flat-square" alt="Docs"/>
+</p>
 
-## ✨ Solution
-**Crew Dev** provides specialized development agents that:
-- **Coordinate** on features end-to-end
-- **Built-in Governance** - security agent must approve
-- **Learn** team patterns and conventions
-- **Extensible** - add custom agents
+<br/>
+
+<!-- Tagline Box -->
+<table>
+<tr>
+<td>
+
+```
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║   👥  CREW DEV: Specialized AI agents for development workflows             ║
+║                                                                              ║
+║       🤖  Coder → Tester → Security → Docs (end-to-end pipeline)            ║
+║       🛡️   Built-in governance - security agent must approve                 ║
+║       📚  Learns your team's patterns and conventions                        ║
+║       🔧  Extensible - add custom agents for your workflow                   ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+```
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+<!-- Quick Links -->
+[**🚀 Quick Start**](#-quick-start) · [**🤖 Agents**](#-agents) · [**🏗️ Architecture**](#-architecture) · [**📊 Example**](#-example-workflow)
+
+<br/>
+
+</div>
+
+---
+
+<br/>
+
+## 🎯 The Problem vs Solution
+
+<table>
+<tr>
+<td width="50%">
+
+### ❌ The Problem
+```
+Agent ecosystems (AutoGen, CrewAI)
+are generic - not built for
+software development workflows.
+
+You need:
+├── Code that follows conventions
+├── Tests with good coverage
+├── Security review
+└── Updated documentation
+
+No tool does all of this.
+```
+
+</td>
+<td width="50%">
+
+### ✅ The Solution
+```
+$ crew-dev assign "Add notifications"
+
+✓ Coder: Implements feature
+✓ Tester: 92% coverage
+✓ Security: No vulnerabilities
+✓ Docs: README updated
+
+🎉 Feature complete!
+```
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+---
+
+<br/>
 
 ## 🤖 Agents
 
-1. **Coder** - Implements features following project conventions
-   - Capabilities: code-generation, refactoring, bug-fixing
-2. **Tester** - Writes comprehensive test suites
-   - Capabilities: test-writing, coverage-analysis, e2e-testing
-3. **Security Reviewer** - Scans for vulnerabilities
-   - Capabilities: vulnerability-scanning, code-review, dependency-audit
-4. **Doc Writer** - Generates documentation
-   - Capabilities: doc-generation, api-docs, readme-updates
+<div align="center">
 
-## 📦 Installation
+| Agent | Role | Capabilities |
+|:------|:-----|:-------------|
+| **🔧 Coder** | Implements features | code-generation, refactoring, bug-fixing |
+| **🧪 Tester** | Writes test suites | test-writing, coverage-analysis, e2e-testing |
+| **🛡️ Security** | Scans for vulnerabilities | vulnerability-scanning, code-review, dependency-audit |
+| **📝 Docs** | Generates documentation | doc-generation, api-docs, readme-updates |
+
+</div>
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    AGENT PIPELINE                               │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  Task Assignment                                                │
+│       ↓                                                         │
+│  Orchestrator                                                   │
+│       ↓                                                         │
+│  ┌────┴────┬────────┬──────────┐                               │
+│  │ Coder   │ Tester │ Security │ Docs                          │
+│  │         │        │          │                                │
+│  │ Implements → Tests → Scans → Documents                      │
+│  └─────────┴────────┴──────────┘                               │
+│                                                                 │
+│  Security agent MUST approve before merge                       │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+<br/>
+
+---
+
+<br/>
+
+## 🚀 Quick Start
+
+### Installation
 
 ```bash
 npm install -g crew-dev
 ```
 
-## 🚀 Quick Start
+### Usage
 
 ```bash
 # Initialize project
@@ -51,6 +165,12 @@ crew-dev assign "Add user authentication"
 # Custom agent workflow
 crew-dev assign "Fix login bug" --agents coder,tester
 ```
+
+<br/>
+
+---
+
+<br/>
 
 ## 📊 Example Workflow
 
@@ -86,25 +206,105 @@ Security scan complete. No critical issues found.
 🎉 Workflow completed successfully!
 ```
 
+<br/>
+
+---
+
+<br/>
+
 ## 🏗️ Architecture
 
 ```
-Task Assignment
-     ↓
-Orchestrator
-     ↓
-┌────┴────┬────────┬──────────┐
-│ Coder   │ Tester │ Security │ Docs
-│         │        │          │
-│ Implements → Tests → Scans → Documents
-└─────────┴────────┴──────────┘
+┌─────────────────────────────────────────────────────────────────┐
+│                    CREW DEV ARCHITECTURE                        │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│                    ┌──────────────┐                            │
+│                    │    Task      │                            │
+│                    │   Manager    │                            │
+│                    └──────┬───────┘                            │
+│                           │                                     │
+│                    ┌──────▼───────┐                            │
+│                    │ Orchestrator │                            │
+│                    └──────┬───────┘                            │
+│           ┌───────────────┼───────────────┐                    │
+│           ▼               ▼               ▼                    │
+│     ┌─────────┐     ┌─────────┐     ┌─────────┐              │
+│     │  Coder  │────▶│ Tester  │────▶│Security │              │
+│     │  Agent  │     │  Agent  │     │  Agent  │              │
+│     └─────────┘     └─────────┘     └────┬────┘              │
+│                                          │                     │
+│                                   ┌──────▼───────┐            │
+│                                   │    Docs      │            │
+│                                   │   Agent      │            │
+│                                   └──────────────┘            │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
-## 🎯 Star Potential: 30k-50k
-- Rides agent coordination wave (AutoGen/CrewAI momentum)
-- Fills dev-specific gap
-- Combines multiple trends (agents + development)
+<br/>
+
+---
+
+<br/>
+
+## ✨ Features
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    KEY FEATURES                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  🔄  END-TO-END AUTOMATION                                      │
+│      From code to docs in one command                           │
+│                                                                 │
+│  🛡️  BUILT-IN GOVERNANCE                                        │
+│      Security agent must approve all changes                    │
+│                                                                 │
+│  📚  LEARNS YOUR PATTERNS                                       │
+│      Adapts to team conventions over time                       │
+│                                                                 │
+│  🔧  EXTENSIBLE                                                 │
+│      Add custom agents for specialized tasks                    │
+│                                                                 │
+│  📊  VISIBILITY                                                 │
+│      Track progress and see what each agent does                │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+<br/>
+
+---
+
+<br/>
 
 ## 📄 License
 
-MIT License
+<div align="center">
+
+**MIT License** © Crew Dev
+
+</div>
+
+<br/>
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=8,10,12&height=100&section=footer"/>
+
+<br/>
+
+**👥 Crew Dev** — *Your AI development team*
+
+<br/>
+
+*"One command, full feature delivery."*
+
+<br/>
+
+[⬆ Back to Top](#-crew-dev)
+
+</div>
